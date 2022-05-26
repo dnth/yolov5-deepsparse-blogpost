@@ -1,7 +1,7 @@
 weights: yolov5s.pt
-cfg: /home/dnth/Desktop/yolov5-deepsparse-blogpost/yolov5-train/models_v5.0/yolov5s.yaml
+cfg: ./models_v5.0/yolov5s.yaml
 data: /home/dnth/Desktop/yolov5-deepsparse-blogpost/yolov5-train/data/asl.yaml
-hyp: /home/dnth/Desktop/yolov5-deepsparse-blogpost/yolov5-train/data/hyps/hyp.finetune.yaml
+hyp: data/hyps/hyp.finetune.yaml
 epochs: 100
 batch_size: 256
 imgsz: 416
@@ -14,13 +14,13 @@ evolve: null
 bucket: ''
 cache: null
 image_weights: false
-device: ''
+device: '0'
 multi_scale: false
 single_cls: false
 optimizer: Adam
 sync_bn: false
 workers: 8
-project: yolov5-train/runs/train
+project: runs/train
 name: exp
 exist_ok: false
 quad: false
@@ -37,4 +37,4 @@ bbox_interval: -1
 artifact_alias: latest
 recipe: null
 disable_ema: false
-save_dir: yolov5-train/runs/train/exp
+save_dir: runs/train/exp3
