@@ -1,4 +1,4 @@
-path: ../datasets/ASL_Dataset
+path: ../datasets/american_sign_language
 train: train/images
 val: valid/images
 test: test/images
