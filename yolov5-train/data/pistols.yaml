@@ -1,0 +1,7 @@
+path: ../datasets/pistols
+train: train/images
+val: valid/images
+test: valid/images
+
+nc: 1
+names: ['pistol']
