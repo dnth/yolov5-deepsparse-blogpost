@@ -146,7 +146,7 @@ def export_onnx(model, im, file, opset, train, dynamic, simplify, prefix=colorst
         output_names = [f'out_{i}' for i in range(num_outputs)]
         dynamic_axes = {k: {0: 'batch'} for k in (input_names + output_names)} if dynamic else None
         exporter = ModuleExporter(model, save_dir)
-        exporter.export_onnx(im, name=save_name, convert_qat=True,
+        exporter.export_onnx(im, name=save_name, convert_qat=True, skip_input_quantize=True,
                                 input_names=input_names, output_names=output_names, dynamic_axes=dynamic_axes)
         try:
             skip_onnx_input_quantize(f, f)
