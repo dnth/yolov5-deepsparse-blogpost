@@ -2,7 +2,7 @@ weights: yolov5s.pt
 cfg: ./models_v5.0/yolov5s.yaml
 data: /home/dnth/Desktop/yolov5-deepsparse-blogpost/yolov5-train/data/pistols.yaml
 hyp: data/hyps/hyp.scratch.yaml
-epochs: 100
+epochs: 240
 batch_size: 64
 imgsz: 416
 rect: false
