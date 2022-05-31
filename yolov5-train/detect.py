@@ -173,8 +173,11 @@ def run(
             # Stream results
             im0 = annotator.result()
             if view_img:
+                cv2.namedWindow(str(p), cv2.WINDOW_NORMAL)
                 cv2.imshow(str(p), im0)
-                cv2.waitKey(1)  # 1 millisecond
+                ch = cv2.waitKey(1)
+                if ch == 27 or ch == ord("q") or ch == ord("Q"):
+                    break
 
             # Save results (image with detections)
             if save_img:
