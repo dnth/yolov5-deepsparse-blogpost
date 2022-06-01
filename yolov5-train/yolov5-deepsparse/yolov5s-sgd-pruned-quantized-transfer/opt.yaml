@@ -1,7 +1,7 @@
 weights: zoo:cv/detection/yolov5-s/pytorch/ultralytics/coco/pruned_quant-aggressive_94?recipe_type=transfer
 cfg: ./models_v5.0/yolov5s.yaml
 data: /home/dnth/Desktop/yolov5-deepsparse-blogpost/yolov5-train/data/pistols.yaml
-hyp: data/hyps/hyp.finetune.yaml
+hyp: data/hyps/hyp.scratch.yaml
 epochs: 300
 batch_size: 64
 imgsz: 416
@@ -37,4 +37,4 @@ bbox_interval: -1
 artifact_alias: latest
 recipe: ../recipes/yolov5.transfer_learn_pruned_quantized.md
 disable_ema: false
-save_dir: yolov5-deepsparse/yolov5s-sgd-pruned-quantized-transfer
+save_dir: yolov5-deepsparse/yolov5s-sgd-pruned-quantized-transfer2

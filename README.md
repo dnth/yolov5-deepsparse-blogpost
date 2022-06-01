@@ -20,29 +20,29 @@ Repo for the blogpost on using Yolov5 with DeepSparse Engine
 `python train.py --data pistols.yaml --cfg ./models_v5.0/yolov5s.yaml --weights zoo:cv/detection/yolov5-s/pytorch/ultralytics/coco/pruned_quant-aggressive_94?recipe_type=transfer --img 416 --batch-size 64 --hyp data/hyps/hyp.finetune.yaml --recipe ../recipes/yolov5.transfer_learn_pruned_quantized.md --optimizer SGD --device 0 --project yolov5-deepsparse --name yolov5s-sgd-pruned-quantized-transfer`
 
 ### Export
-`python export.py --weights yolov5-deepsparse/yolov5s-sgd/weights/best.pt --include onnx --imgsz 416`
+`python export.py --weights yolov5-deepsparse/yolov5s-sgd/weights/best.pt --include onnx --imgsz 416 --dynamic --simplify`
 
-`python export.py --weights yolov5-deepsparse/yolov5s-sgd-pruned/weights/best.pt --include onnx --imgsz 416`
+`python export.py --weights yolov5-deepsparse/yolov5s-sgd-pruned/weights/best.pt --include onnx --imgsz 416 --dynamic --simplify`
 
-`python export.py --weights yolov5-deepsparse/yolov5s-sgd-pruned-quantized/weights/best.pt --include onnx --imgsz 416`
+`python export.py --weights yolov5-deepsparse/yolov5s-sgd-pruned-quantized/weights/best.pt --include onnx --imgsz 416 --dynamic --simplify`
 
-`python export.py --weights yolov5-deepsparse/yolov5s-sgd-pruned-quantized-transfer/weights/best.pt --include onnx --imgsz 416`
+`python export.py --weights yolov5-deepsparse/yolov5s-sgd-pruned-quantized-transfer/weights/best.pt --include onnx --imgsz 416 --dynamic --simplify`
 
 ### Detect
 `python detect.py --weights yolov5-deepsparse/yolov5s-sgd/weights/best.pt --source data/pexels-cottonbro-8717592.mp4 --data data/pistols.yaml --imgsz 416 --view-img --nosave --device cpu`
 
 
 ### Annotate CPU PyTorch Engine
-`python annotate.py yolov5-deepsparse/yolov5s-sgd/weights/best.pt --source data/pexels-cottonbro-8717592.mp4 --no-save --engine torch --image-shape 416 416 --device cpu --conf-thres 0.6`
+`python annotate.py yolov5-deepsparse/yolov5s-sgd/weights/best.pt --source data/pexels-cottonbro-8717592.mp4 --engine torch --image-shape 416 416 --device cpu --conf-thres 0.6`
 
 ### Annotate ONNX No Optimization
-`python annotate.py yolov5-deepsparse/yolov5s-sgd/weights/best.onnx --source data/pexels-cottonbro-8717592.mp4 --no-save --engine deepsparse --device cpu --conf-thres 0.6 --image-shape 416 416`
+`python annotate.py yolov5-deepsparse/yolov5s-sgd/weights/best.onnx --source data/pexels-cottonbro-8717592.mp4 --engine deepsparse --device cpu --conf-thres 0.7 --image-shape 416 416`
 
 ### Annotate with Pruning
-`python annotate.py yolov5-deepsparse/yolov5s-sgd-pruned/weights/best.onnx --source data/pexels-cottonbro-8717592.mp4 --no-save --engine deepsparse --device cpu --conf-thres 0.6 --image-shape 416 416`
+`python annotate.py yolov5-deepsparse/yolov5s-sgd-pruned/weights/best.onnx --source data/pexels-cottonbro-8717592.mp4 --engine deepsparse --device cpu --conf-thres 0.7 --image-shape 416 416`
 
 ### Annotate with Pruning and Quant
-`python annotate.py yolov5-deepsparse/yolov5s-sgd-pruned-quantized/weights/best.onnx --source data/pexels-cottonbro-8717592.mp4 --no-save --engine deepsparse --device cpu --conf-thres 0.3 --image-shape 416 416 --quantized-input`
+`python annotate.py yolov5-deepsparse/yolov5s-sgd-pruned-quantized/weights/best.onnx --source data/pexels-cottonbro-8717592.mp4 --engine deepsparse --device cpu --conf-thres 0.7 --image-shape 416 416 --quantized-input`
 
 ### Annotate with Pruning and Quant and TL
-`python annotate.py yolov5-deepsparse/yolov5s-sgd-pruned-quantized/weights/best.onnx --source data/pexels-cottonbro-8717592.mp4 --no-save --engine deepsparse --device cpu --conf-thres 0.3 --image-shape 416 416 --quantized-input`
+`python annotate.py yolov5-deepsparse/yolov5s-sgd-pruned-quantized-transfer/weights/best.onnx --source data/pexels-cottonbro-8717592.mp4 --engine deepsparse --device cpu --conf-thres 0.8 --image-shape 416 416 --quantized-input`
