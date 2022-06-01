@@ -46,3 +46,7 @@ Repo for the blogpost on using Yolov5 with DeepSparse Engine
 
 ### Annotate with Pruning and Quant and TL
 `python annotate.py yolov5-deepsparse/yolov5s-sgd-pruned-quantized-transfer/weights/best.onnx --source data/pexels-cottonbro-8717592.mp4 --engine deepsparse --device cpu --conf-thres 0.8 --image-shape 416 416 --quantized-input`
+
+### Wandb Dashboard
+
+https://wandb.ai/dnth/yolov5-deepsparse?workspace=user-dnth
