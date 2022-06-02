@@ -17,7 +17,7 @@ Repo for the blogpost on using Yolov5 with DeepSparse Engine
 
 `python train.py --cfg ./models_v5.0/yolov5s.yaml --recipe ../recipes/yolov5.transfer_learn_pruned_quantized.md --data pistols.yaml --hyp data/hyps/hyp.scratch.yaml --weights yolov5s.pt --img 416 --batch-size 64 --optimizer SGD --device 0 --project yolov5-deepsparse --name yolov5s-sgd-pruned-quantized`
 
-`python train.py --data pistols.yaml --cfg ./models_v5.0/yolov5s.yaml --weights zoo:cv/detection/yolov5-s/pytorch/ultralytics/coco/pruned_quant-aggressive_94?recipe_type=transfer --img 416 --batch-size 64 --hyp data/hyps/hyp.finetune.yaml --recipe ../recipes/yolov5.transfer_learn_pruned_quantized.md --optimizer SGD --device 0 --project yolov5-deepsparse --name yolov5s-sgd-pruned-quantized-transfer`
+`python train.py --data pistols.yaml --cfg ./models_v5.0/yolov5s.yaml --weights zoo:cv/detection/yolov5-s/pytorch/ultralytics/coco/pruned_quant-aggressive_94?recipe_type=transfer --img 416 --batch-size 64 --hyp data/hyps/hyp.scratch.yaml --recipe ../recipes/yolov5.transfer_learn_pruned_quantized.md --optimizer SGD --device 0 --project yolov5-deepsparse --name yolov5s-sgd-pruned-quantized-transfer`
 
 ### Export
 `python export.py --weights yolov5-deepsparse/yolov5s-sgd/weights/best.pt --include onnx --imgsz 416 --dynamic --simplify`
@@ -48,5 +48,4 @@ Repo for the blogpost on using Yolov5 with DeepSparse Engine
 `python annotate.py yolov5-deepsparse/yolov5s-sgd-pruned-quantized-transfer/weights/best.onnx --source data/pexels-cottonbro-8717592.mp4 --engine deepsparse --device cpu --conf-thres 0.8 --image-shape 416 416 --quantized-input`
 
 ### Wandb Dashboard
-
 https://wandb.ai/dnth/yolov5-deepsparse?workspace=user-dnth
