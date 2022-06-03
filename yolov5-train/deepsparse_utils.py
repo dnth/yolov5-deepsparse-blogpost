@@ -580,6 +580,7 @@ _YOLO_CLASSES = [
 
 _YOLO_CLASS_COLORS = list(itertools.product([0, 255, 128, 64, 192], repeat=3))
 _YOLO_CLASS_COLORS.remove((255, 255, 255))  # remove white from possible colors
+_YOLO_CLASS_COLORS.remove((0, 0, 0))  # remove black from possible colors
 
 
 def draw_text(

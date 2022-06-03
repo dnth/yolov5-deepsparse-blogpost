@@ -419,6 +419,8 @@ def annotate(args):
     # Keep a running average of frame times
     fps = AverageFPS()
 
+    total_inference_time = 0.0
+
     for iteration, (inp, source_img) in enumerate(loader):
         if args.device not in ["cpu", None]:
             torch.cuda.synchronize()
@@ -464,11 +466,11 @@ def annotate(args):
             if ch == 27 or ch == ord("q") or ch == ord("Q"):
                 break
 
-        cv2.namedWindow("annotations", cv2.WINDOW_NORMAL)
-        cv2.imshow("annotations", annotated_img)
-        ch = cv2.waitKey(1)
-        if ch == 27 or ch == ord("q") or ch == ord("Q"):
-            break
+        # cv2.namedWindow("annotations", cv2.WINDOW_NORMAL)
+        # cv2.imshow("annotations", annotated_img)
+        # ch = cv2.waitKey(1)
+        # if ch == 27 or ch == ord("q") or ch == ord("Q"):
+        #     break
 
         # save
         if saver:
@@ -477,6 +479,11 @@ def annotate(args):
         iter_end = time.time()
         elapsed_time = 1000 * (iter_end - iter_start)
         _LOGGER.info(f"Inference {iteration} processed in {elapsed_time} ms")
+        total_inference_time += elapsed_time
+
+    average_inf_time_ms = total_inference_time/iteration
+    _LOGGER.info(f"Average inference time per frame: {average_inf_time_ms} ms")
+    _LOGGER.info(f"Average FPS: {1/(average_inf_time_ms/1000)}")
 
     if saver:
         saver.close()
