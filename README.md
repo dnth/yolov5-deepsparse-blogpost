@@ -71,7 +71,7 @@ Companion repo for the [blogpost](https://dicksonneoh.com/portfolio/superchargin
 `python annotate.py yolov5-deepsparse/yolov5s-sgd/weights/best.onnx --source data/pexels-cottonbro-8717592.mp4 --engine deepsparse --device cpu --conf-thres 0.7 --image-shape 416 416 --num-cores 4`
 
 
-#### #### YOLOv5-S Pruned (One-Shot) - DeepSparse Engine
+#### YOLOv5-S Pruned (One-Shot) - DeepSparse Engine
 `python annotate.py yolov5-deepsparse/yolov5s-sgd-one-shot/weights/checkpoint-one-shot.onnx --source data/pexels-cottonbro-8717592.mp4 --engine deepsparse --device cpu --conf-thres 0.7 --image-shape 416 416 --num-cores 4`
 
 
