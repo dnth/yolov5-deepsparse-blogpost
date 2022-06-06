@@ -11,7 +11,7 @@ Companion repo for the [blogpost](https://dicksonneoh.com/portfolio/superchargin
 
 `pip3 install torch==1.9.0 torchvision==0.10.0 --extra-index-url https://download.pytorch.org/whl/cu111`
 
-### Training
+### 🥋 Training
 
 #### YOLOv5-S Baseline
 `python train.py --cfg ./models_v5.0/yolov5s.yaml --data pistols.yaml --hyp data/hyps/hyp.scratch.yaml --weights yolov5s.pt --img 416 --batch-size 64 --optimizer SGD --epochs 100 --device 0 --project yolov5-deepsparse --name yolov5s-sgd`
@@ -35,7 +35,7 @@ Companion repo for the [blogpost](https://dicksonneoh.com/portfolio/superchargin
 #### YOLOv5n Pruned + Quantized
 `python train.py --cfg ./models_v5.0/yolov5n.yaml --recipe ../recipes/yolov5.transfer_learn_pruned_quantized.md --data pistols.yaml --hyp data/hyps/hyp.scratch.yaml --weights yolov5n.pt --img 416 --batch-size 64 --optimizer SGD --device 0 --project yolov5-deepsparse --name yolov5n-sgd-pruned-quantized`
 
-### Export to ONNX
+### 🤖 Export to ONNX
 
 #### YOLOv5-S Baseline
 
@@ -61,7 +61,7 @@ Companion repo for the [blogpost](https://dicksonneoh.com/portfolio/superchargin
 
 
 
-### Inference
+### 🚀 Inference
 
 #### YOLOv5-S Baseline - PyTorch Engine
 `python annotate.py yolov5-deepsparse/yolov5s-sgd/weights/best.pt --source data/pexels-cottonbro-8717592.mp4 --engine torch --image-shape 416 416 --device cpu --conf-thres 0.7`
