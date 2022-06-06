@@ -35,7 +35,7 @@ Companion repo for the [blogpost](https://dicksonneoh.com/portfolio/superchargin
 #### YOLOv5n Pruned + Quantized
 `python train.py --cfg ./models_v5.0/yolov5n.yaml --recipe ../recipes/yolov5.transfer_learn_pruned_quantized.md --data pistols.yaml --hyp data/hyps/hyp.scratch.yaml --weights yolov5n.pt --img 416 --batch-size 64 --optimizer SGD --device 0 --project yolov5-deepsparse --name yolov5n-sgd-pruned-quantized`
 
-### Export
+### Export to ONNX
 
 #### YOLOv5-S Baseline
 
