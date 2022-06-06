@@ -63,19 +63,19 @@ Companion repo for the [blogpost](https://dicksonneoh.com/portfolio/superchargin
 
 ### Inference
 
-### YOLOv5-S Baseline - PyTorch Engine
+#### YOLOv5-S Baseline - PyTorch Engine
 `python annotate.py yolov5-deepsparse/yolov5s-sgd/weights/best.pt --source data/pexels-cottonbro-8717592.mp4 --engine torch --image-shape 416 416 --device cpu --conf-thres 0.7`
 
 
-### YOLOv5-S Baseline - DeepSparse Engine
+#### YOLOv5-S Baseline - DeepSparse Engine
 `python annotate.py yolov5-deepsparse/yolov5s-sgd/weights/best.onnx --source data/pexels-cottonbro-8717592.mp4 --engine deepsparse --device cpu --conf-thres 0.7 --image-shape 416 416 --num-cores 4`
 
 
-### YOLOv5-S One Shot Pruned - DeepSparse Engine
+#### YOLOv5-S One Shot Pruned - DeepSparse Engine
 `python annotate.py yolov5-deepsparse/yolov5s-sgd-one-shot/weights/checkpoint-one-shot.onnx --source data/pexels-cottonbro-8717592.mp4 --engine deepsparse --device cpu --conf-thres 0.7 --image-shape 416 416 --num-cores 4`
 
 
-### YOLOv5-S Pruned - DeepSparse Engine
+#### YOLOv5-S Pruned - DeepSparse Engine
 `python annotate.py yolov5-deepsparse/yolov5s-sgd-pruned/weights/best.onnx --source data/pexels-cottonbro-8717592.mp4 --engine deepsparse --device cpu --conf-thres 0.7 --image-shape 416 416 --num-cores 4`
 
 #### YOLOv5-S Pruned + Quantized - DeepSparse Engine
