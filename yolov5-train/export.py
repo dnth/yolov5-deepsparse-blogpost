@@ -143,7 +143,7 @@ def export_onnx(model, im, file, opset, train, dynamic, simplify, prefix=colorst
 
         outputs = model(im)
         num_outputs = _count_outputs(outputs)
-        input_names = ['input']
+        input_names = ['images']
         output_names = [f'out_{i}' for i in range(num_outputs)]
         dynamic_axes = {k: {0: 'batch'} for k in (input_names + output_names)} if dynamic else None
         exporter = ModuleExporter(model, save_dir)

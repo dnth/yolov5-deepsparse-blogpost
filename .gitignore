@@ -25,6 +25,7 @@ yolov3-tiny.conv.15
 wandb/
 annotation_results/
 events.out*
+.vscode/
 
 # GitHub Python GitIgnore ----------------------------------------------------------------------------------------------
 # Byte-compiled / optimized / DLL files
