@@ -1,4 +1,4 @@
-# Supercharging YOLOv5: How I get 180+ FPS Inference on a CPU using only 4 Cores
+# Supercharging YOLOv5: How I Got 182.4 FPS Inference Without a GPU
 ![image](https://dicksonneoh.com/images/portfolio/supercharging_yolov5/post_image.png)
 
 Companion repo for the [blogpost](https://dicksonneoh.com/portfolio/supercharging_yolov5_180_fps_cpu/).
