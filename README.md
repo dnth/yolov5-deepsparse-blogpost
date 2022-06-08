@@ -9,7 +9,7 @@ Companion repo for the [blogpost](https://dicksonneoh.com/portfolio/superchargin
 pip install -r req.txt
 ```
 
-Install `yolov5` by
+Install `yolov5` by running
 
 ```
 git clone https://github.com/neuralmagic/yolov5.git
