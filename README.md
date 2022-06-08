@@ -5,11 +5,18 @@ Companion repo for the [blogpost](https://dicksonneoh.com/portfolio/superchargin
 
 ## Installation
 
-`pip install tensorboard seaborn pyyaml tqdm sparseml opencv-python deepsparse`
+```
+pip install -r req.txt
+```
 
-`pip install setuptools==59.5.0`
+Install `yolov5` by
 
-`pip3 install torch==1.9.0 torchvision==0.10.0 --extra-index-url https://download.pytorch.org/whl/cu111`
+```
+git clone https://github.com/neuralmagic/yolov5.git
+cd yolov5
+git checkout release/0.12
+pip install -r requirements.txt
+```
 
 ## 🥋 Training
 
