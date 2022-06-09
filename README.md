@@ -28,7 +28,7 @@ python train.py --cfg ./models_v5.0/yolov5s.yaml --data pistols.yaml --hyp data/
 
 #### YOLOv5-S Pruned (One-Shot)
 ```
-python train.py --cfg ./models_v5.0/yolov5s.yaml --data pistols.yaml --hyp data/hyps/hyp.scratch.yaml --weights yolov5-deepsparse/yolov5s-sgd/weights/best.pt --img 416 --batch-size 64 --optimizer SGD --epochs 100 --device 0 --project yolov5-deepsparse --name yolov5s-sgd-one-shot --one-shot
+python train.py --cfg ./models_v5.0/yolov5s.yaml --recipe ../recipes/yolov5s.pruned.md --data pistols.yaml --hyp data/hyps/hyp.scratch.yaml --weights yolov5-deepsparse/yolov5s-sgd/weights/best.pt --img 416 --batch-size 64 --optimizer SGD --epochs 100 --device 0 --project yolov5-deepsparse --name yolov5s-sgd-one-shot --one-shot
 ```
 
 
