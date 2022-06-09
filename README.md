@@ -26,7 +26,7 @@ python train.py --cfg ./models_v5.0/yolov5s.yaml --data pistols.yaml --hyp data/
 ```
 
 
-#### YOLOv5-S Pruned (One-Shot)
+#### YOLOv5-S (One-Shot)
 ```
 python train.py --cfg ./models_v5.0/yolov5s.yaml --recipe ../recipes/yolov5s.pruned.md --data pistols.yaml --hyp data/hyps/hyp.scratch.yaml --weights yolov5-deepsparse/yolov5s-sgd/weights/best.pt --img 416 --batch-size 64 --optimizer SGD --epochs 100 --device 0 --project yolov5-deepsparse --name yolov5s-sgd-one-shot --one-shot
 ```
@@ -62,7 +62,7 @@ python train.py --cfg ./models_v5.0/yolov5n.yaml --recipe ../recipes/yolov5.tran
 python export.py --weights yolov5-deepsparse/yolov5s-sgd/weights/best.pt --include onnx --imgsz 416 --dynamic --simplify
 ```
 
-#### YOLOv5-S Pruned (One-Shot)
+#### YOLOv5-S (One-Shot)
 
 ```python export.py --weights yolov5-deepsparse/yolov5s-sgd-one-shot/weights/checkpoint-one-shot.pt --include onnx --imgsz 416 --dynamic --simplify
 ```
@@ -105,7 +105,7 @@ python annotate.py yolov5-deepsparse/yolov5s-sgd/weights/best.onnx --source data
 ```
 
 
-#### YOLOv5-S Pruned (One-Shot) - DeepSparse Engine
+#### YOLOv5-S (One-Shot) - DeepSparse Engine
 ```
 python annotate.py yolov5-deepsparse/yolov5s-sgd-one-shot/weights/checkpoint-one-shot.onnx --source data/pexels-cottonbro-8717592.mp4 --engine deepsparse --device cpu --conf-thres 0.7 --image-shape 416 416 --num-cores 4
 ```
