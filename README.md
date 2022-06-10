@@ -10,10 +10,9 @@ Companion repo for the [blogpost](https://dicksonneoh.com/portfolio/superchargin
 ## Installation
 
 ```
+git clone https://github.com/dnth/yolov5-deepsparse-blogpost
+cd yolov5-deepsparse-blogpost/
 pip install torch==1.9.0 torchvision==0.10.0 --extra-index-url https://download.pytorch.org/whl/cu111
-```
-
-```
 pip install -r req.txt
 ```
 
