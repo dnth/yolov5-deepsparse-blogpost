@@ -13,15 +13,6 @@ pip install torch==1.9.0 torchvision==0.10.0 --extra-index-url https://download.
 pip install -r req.txt
 ```
 
-Install `yolov5` by running
-
-```
-git clone https://github.com/neuralmagic/yolov5.git
-cd yolov5
-git checkout release/0.12
-pip install -r requirements.txt
-```
-
 ## 🥋 Training
 
 #### YOLOv5-S Baseline
