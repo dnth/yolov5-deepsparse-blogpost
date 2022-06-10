@@ -3,9 +3,7 @@
 
 Companion repo for the [blogpost](https://dicksonneoh.com/portfolio/supercharging_yolov5_180_fps_cpu/).
 
-## 🔥 Run In Colab
 
-[Colab Notebook](https://colab.research.google.com/drive/1GL1ChGjOG25BxP9EfkiTxO83sEraBu-7?usp=sharing)
 
 ## Installation
 
@@ -15,6 +13,12 @@ cd yolov5-deepsparse-blogpost/
 pip install torch==1.9.0 torchvision==0.10.0 --extra-index-url https://download.pytorch.org/whl/cu111
 pip install -r req.txt
 ```
+
+Or
+
+## 🔥 Run In Colab
+
+[Colab Notebook](https://colab.research.google.com/drive/1GL1ChGjOG25BxP9EfkiTxO83sEraBu-7?usp=sharing)
 
 ## 🥋 Training
 
