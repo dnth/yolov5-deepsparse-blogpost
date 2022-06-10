@@ -3,6 +3,8 @@
 
 Companion repo for the [blogpost](https://dicksonneoh.com/portfolio/supercharging_yolov5_180_fps_cpu/).
 
+[Colab Notebook](https://colab.research.google.com/drive/1GL1ChGjOG25BxP9EfkiTxO83sEraBu-7?usp=sharing)
+
 ## Installation
 
 ```
