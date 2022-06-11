@@ -18,7 +18,13 @@ Or
 
 ## 🔥 Run In Colab
 
-[Colab Notebook](https://colab.research.google.com/drive/1GL1ChGjOG25BxP9EfkiTxO83sEraBu-7?usp=sharing)
+The easiest way to get started is to run this [Colab Notebook](https://colab.research.google.com/drive/1GL1ChGjOG25BxP9EfkiTxO83sEraBu-7?usp=sharing).
+
+The notebook serves as a guide to 
+
++ Install all packages used this blog post.
++ Train sparse YOLOv5 models using `SparseML`. 
++ Run inference using the `DeepSparse` engine.
 
 ## 🥋 Training
 
