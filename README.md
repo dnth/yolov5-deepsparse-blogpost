@@ -14,7 +14,7 @@ pip install torch==1.9.0 torchvision==0.10.0 --extra-index-url https://download.
 pip install -r req.txt
 ```
 
-Or
+Or (Highly recommended!) 👇
 
 ## 🔥 Run In Colab
 
