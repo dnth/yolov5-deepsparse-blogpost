@@ -20,7 +20,7 @@ Or (Highly recommended!) 👇
 
 The easiest way to get started is to run this [Colab Notebook](https://colab.research.google.com/github/dnth/yolov5-deepsparse-blogpost/blob/master/notebooks/deepsparse_blogpost.ipynb).
 
-The notebook serves as a guide to 
+The notebook serves as a guide to:
 
 + Install all packages used this blog post.
 + Train a sparse YOLOv5 models using `SparseML`. 
