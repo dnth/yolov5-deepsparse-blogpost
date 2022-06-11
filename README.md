@@ -66,7 +66,8 @@ python export.py --weights yolov5-deepsparse/yolov5s-sgd/weights/best.pt --inclu
 
 #### YOLOv5-S (One-Shot)
 
-```python export.py --weights yolov5-deepsparse/yolov5s-sgd-one-shot/weights/checkpoint-one-shot.pt --include onnx --imgsz 416 --dynamic --simplify
+```
+python export.py --weights yolov5-deepsparse/yolov5s-sgd-one-shot/weights/checkpoint-one-shot.pt --include onnx --imgsz 416 --dynamic --simplify
 ```
 
 #### YOLOv5-S Pruned
