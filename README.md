@@ -18,7 +18,7 @@ Or (Highly recommended!) 👇
 
 ## 🔥 Run In Colab
 
-The easiest way to get started is to run this [Colab Notebook](https://colab.research.google.com/drive/1GL1ChGjOG25BxP9EfkiTxO83sEraBu-7?usp=sharing).
+The easiest way to get started is to run this [Colab Notebook](https://colab.research.google.com/github/dnth/yolov5-deepsparse-blogpost/blob/master/notebooks/deepsparse_blogpost.ipynb).
 
 The notebook serves as a guide to 
 
