@@ -40,9 +40,15 @@ python train.py --cfg ./models_v5.0/yolov5s.yaml --recipe ../recipes/yolov5s.pru
 ```
 
 
+
 #### YOLOv5-S Pruned
 ```
 python train.py --cfg ./models_v5.0/yolov5s.yaml --recipe ../recipes/yolov5s.pruned.md --data pistols.yaml --hyp data/hyps/hyp.scratch.yaml --weights yolov5s.pt --img 416 --batch-size 64 --optimizer SGD --device 0 --project yolov5-deepsparse --name yolov5s-sgd-pruned
+```
+
+#### YOLOv5-S Quantized
+```
+python train.py --cfg ./models_v5.0/yolov5s.yaml --recipe ../recipes/yolov5s.quantized.md --data pistols.yaml --hyp data/hyps/hyp.scratch.yaml --weights yolov5-deepsparse/yolov5s-sgd/weights/best.pt --img 416 --batch-size 64 --project yolov5-deepsparse --name yolov5s-sgd-quantized
 ```
 
 
@@ -81,6 +87,11 @@ python export.py --weights yolov5-deepsparse/yolov5s-sgd-one-shot/weights/checkp
 python export.py --weights yolov5-deepsparse/yolov5s-sgd-pruned/weights/best.pt --include onnx --imgsz 416 --dynamic --simplify
 ```
 
+#### YOLOv5-S Quantized
+```
+python export.py --weights yolov5-deepsparse/yolov5s-sgd-quantized/weights/best.pt --include onnx --imgsz 416 --dynamic --simplify
+```
+
 #### YOLOv5-S Pruned + Quantized
 
 ```
@@ -107,7 +118,6 @@ python export.py --weights yolov5-deepsparse/yolov5n-sgd-pruned-quantized/weight
 python annotate.py yolov5-deepsparse/yolov5s-sgd/weights/best.pt --source data/pexels-cottonbro-8717592.mp4 --engine torch --image-shape 416 416 --device cpu --conf-thres 0.7
 ```
 
-
 #### YOLOv5-S Baseline - DeepSparse Engine
 ```
 python annotate.py yolov5-deepsparse/yolov5s-sgd/weights/best.onnx --source data/pexels-cottonbro-8717592.mp4 --engine deepsparse --device cpu --conf-thres 0.7 --image-shape 416 416 --num-cores 4
@@ -123,6 +133,11 @@ python annotate.py yolov5-deepsparse/yolov5s-sgd-one-shot/weights/checkpoint-one
 #### YOLOv5-S Pruned - DeepSparse Engine
 ```
 python annotate.py yolov5-deepsparse/yolov5s-sgd-pruned/weights/best.onnx --source data/pexels-cottonbro-8717592.mp4 --engine deepsparse --device cpu --conf-thres 0.7 --image-shape 416 416 --num-cores 4
+```
+
+#### YOLOv5-S Quantized - DeepSparse Engine
+```
+python annotate.py yolov5-deepsparse/yolov5s-sgd-quantized/weights/best.onnx --source data/pexels-cottonbro-8717592.mp4 --engine deepsparse --device cpu --conf-thres 0.7 --image-shape 416 416 --quantized-input --num-cores 4
 ```
 
 #### YOLOv5-S Pruned + Quantized - DeepSparse Engine
