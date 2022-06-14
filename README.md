@@ -150,6 +150,8 @@ python annotate.py yolov5-deepsparse/yolov5s-sgd-pruned-quantized/weights/best.o
 python annotate.py yolov5-deepsparse/yolov5s-sgd-pruned-quantized-transfer/weights/best.onnx --source data/pexels-cottonbro-8717592.mp4 --engine deepsparse --device cpu --conf-thres 0.8 --image-shape 416 416 --quantized-input --num-cores 4
 ```
 
+#### YOLOv5-Nano Pruned + Quantized - DeepSparse Engine
+
 ```
 python annotate.py yolov5-deepsparse/yolov5n-sgd-pruned-quantized-hardswish/weights/best.onnx --source data/pexels-cottonbro-8717592.mp4 --engine deepsparse --device cpu --conf-thres 0.7 --image-shape 416 416 --quantized-input --num-cores 4
 ```
