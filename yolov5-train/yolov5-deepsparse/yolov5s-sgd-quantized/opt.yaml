@@ -41,4 +41,4 @@ max_train_steps: -1
 max_eval_steps: -1
 one_shot: false
 num_export_samples: 0
-save_dir: yolov5-deepsparse/yolov5s-sgd-quantized2
+save_dir: yolov5-deepsparse/yolov5s-sgd-quantized
