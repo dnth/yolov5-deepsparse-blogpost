@@ -4,12 +4,12 @@
 Companion repo for the [blogpost](https://dicksonneoh.com/portfolio/supercharging_yolov5_180_fps_cpu/).
 
 
-# Support Me
+# ❤️ Support Me
 If you like what you see, support me in keeping the lights on to produce more posts like this.
 
 <a href="https://www.buymeacoffee.com/dicksonneoh" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
-## Installation
+# 🔗 Installation
 
 ```
 git clone https://github.com/dnth/yolov5-deepsparse-blogpost
@@ -20,7 +20,7 @@ pip install -r req.txt
 
 Or (Highly recommended!) 👇
 
-## 🔥 Run In Colab
+# 🔥 Run In Colab
 
 The easiest way to get started is to run this [Colab Notebook](https://colab.research.google.com/github/dnth/yolov5-deepsparse-blogpost/blob/master/notebooks/deepsparse_blogpost.ipynb).
 
@@ -30,7 +30,7 @@ The notebook serves as a guide to:
 + Train a sparse YOLOv5 models using `SparseML`. 
 + Run inference using the `DeepSparse` engine.
 
-## 🥋 Training
+# 🥋 Training
 
 #### YOLOv5-S Baseline
 ```
@@ -72,7 +72,7 @@ python train.py --data pistols.yaml --cfg ./models_v5.0/yolov5s.yaml --weights z
 python train.py --cfg ./models_v5.0/yolov5n.yaml --recipe ../recipes/yolov5.transfer_learn_pruned_quantized.md --data pistols.yaml --hyp data/hyps/hyp.scratch.yaml --weights yolov5n.pt --img 416 --batch-size 64 --optimizer SGD --device 0 --project yolov5-deepsparse --name yolov5n-sgd-pruned-quantized
 ```
 
-## 🤖 Export to ONNX
+# 🤖 Export to ONNX
 
 #### YOLOv5-S Baseline
 
@@ -115,7 +115,7 @@ python export.py --weights yolov5-deepsparse/yolov5n-sgd-pruned-quantized/weight
 
 
 
-## 🚀 Inference
+# 🚀 Inference
 
 #### YOLOv5-S Baseline - PyTorch Engine
 ```
