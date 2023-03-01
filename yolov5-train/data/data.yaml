@@ -1,0 +1,14 @@
+path: ../datasets/yellowtile
+train: train/images
+val: valid/images
+test: test/images
+
+nc: 1
+names: ['TactileTiles']
+
+roboflow:
+  workspace: project
+  project: yellow-tactiletiles
+  version: 3
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/project/yellow-tactiletiles/dataset/3
