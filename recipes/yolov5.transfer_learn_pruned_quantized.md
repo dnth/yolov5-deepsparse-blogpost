@@ -16,7 +16,7 @@ limitations under the License.
 
 ---
 # General Epoch/LR Hyperparams
-num_epochs: &num_epochs 240
+num_epochs: &num_epochs 200
 init_lr: &init_lr 0.0032
 final_lr: &final_lr 0.000384
 warmup_epochs: &warmup_epochs 2
@@ -25,7 +25,7 @@ biases_warmup_lr: &biases_warmup_lr 0.05
 quantization_lr: &quantization_lr 0.000002
 
 # Quantization Params
-quantization_start_epoch: &quantization_start_epoch 238
+quantization_start_epoch: &quantization_start_epoch 198
 
 # modifiers
 training_modifiers:

@@ -15,7 +15,9 @@ limitations under the License.
 -->
 
 ---
+
 # General Epoch/LR Hyperparams
+
 num_epochs: &num_epochs 50
 init_lr: &init_lr 0.0032
 final_lr: &final_lr 0.000384
@@ -24,38 +26,39 @@ weights_warmup_lr: &weights_warmup_lr 0
 biases_warmup_lr: &biases_warmup_lr 0.05
 
 # modifiers
+
 training_modifiers:
-  - !EpochRangeModifier
-    start_epoch: 0.0
-    end_epoch: *num_epochs
-    
-  - !LearningRateFunctionModifier
-    start_epoch: *warmup_epochs
-    end_epoch: *num_epochs
-    lr_func: cosine
-    init_lr: *init_lr
-    final_lr: *final_lr
-    
-  - !LearningRateFunctionModifier
-    start_epoch: 0
-    end_epoch: *warmup_epochs
-    lr_func: linear
-    init_lr: *weights_warmup_lr
-    final_lr: *init_lr
-    param_groups: [0, 1]
-    
-  - !LearningRateFunctionModifier
-    start_epoch: 0
-    end_epoch: *warmup_epochs
-    lr_func: linear
-    init_lr: *biases_warmup_lr
-    final_lr: *init_lr
-    param_groups: [2]
+
+- !EpochRangeModifier
+  start_epoch: 0.0
+  end_epoch: \*num_epochs
+- !LearningRateFunctionModifier
+  start_epoch: *warmup_epochs
+  end_epoch: *num_epochs
+  lr_func: cosine
+  init_lr: *init_lr
+  final_lr: *final_lr
+- !LearningRateFunctionModifier
+  start_epoch: 0
+  end_epoch: *warmup_epochs
+  lr_func: linear
+  init_lr: *weights_warmup_lr
+  final_lr: \*init_lr
+  param_groups: [0, 1]
+- !LearningRateFunctionModifier
+  start_epoch: 0
+  end_epoch: *warmup_epochs
+  lr_func: linear
+  init_lr: *biases_warmup_lr
+  final_lr: \*init_lr
+  param_groups: [2]
 
 pruning_modifiers:
-  - !ConstantPruningModifier
-    start_epoch: 0.0
-    params: __ALL_PRUNABLE__
+
+- !ConstantPruningModifier
+  start_epoch: 0.0
+  params: **ALL_PRUNABLE**
+
 ---
 
 # YOLOv5 Pruned Transfer Learning
@@ -75,11 +78,11 @@ The training results for this recipe are made available through Weights and Bias
 
 To set up the training environment, follow the instructions on the [integration README](https://github.com/neuralmagic/sparseml/blob/main/integrations/ultralytics-yolov5/README.md).
 Using the given training script from the `yolov5` directory the following command can be used to launch this recipe.  
-Adjust the script command for your GPU device setup. 
+Adjust the script command for your GPU device setup.
 Ultralytics supports both DataParallel and DDP.
 Finally, the sparse weights used with this recipe are stored in the SparseZoo and can be retrieved by passing in a SparseZoo stub to the `--weights` argument.
 
-*script command:*
+_script command:_
 
 ```bash
 python train.py \
